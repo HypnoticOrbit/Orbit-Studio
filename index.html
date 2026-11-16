@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Orbit Studio</title>
+<style>
+  :root { --bg:#0b0718; --card:#151027; --text:#ece9f6; --muted:#a79fc4; --gold:#ffcd78; }
+  * { box-sizing: border-box; }
+  body { margin:0; background: radial-gradient(ellipse at 50% 0%, #2a1650 0%, var(--bg) 60%); color:var(--text);
+         font: 16px/1.65 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; min-height:100vh; }
+  header { text-align:center; padding:56px 20px 24px; }
+  .logo { width:88px; height:88px; margin:0 auto 18px; }
+  h1 { margin:0; font-weight:300; letter-spacing:.12em; font-size:28px; }
+  .tag { color:var(--muted); margin-top:6px; }
+  nav { display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin:22px 0 0; }
+  nav a { color:var(--text); text-decoration:none; padding:8px 16px; border:1px solid #3a2e63; border-radius:999px; font-size:14px; }
+  nav a.on { background:var(--gold); color:#1b1230; border-color:var(--gold); }
+  main { max-width:760px; margin:0 auto; padding:10px 20px 70px; }
+  section { display:none; background:var(--card); border:1px solid #2a2148; border-radius:16px; padding:28px 30px; }
+  section.on { display:block; }
+  h2 { margin-top:0; font-weight:500; color:var(--gold); }
+  h3 { margin-bottom:4px; font-weight:600; font-size:17px; }
+  p, li { color:#d9d4ea; }
+  .small { color:var(--muted); font-size:14px; }
+  footer { text-align:center; color:var(--muted); font-size:13px; padding-bottom:40px; }
+</style>
+</head>
+<body>
+<header>
+  <svg class="logo" viewBox="0 0 100 100" aria-hidden="true">
+    <defs><radialGradient id="g" cx="40%" cy="35%"><stop offset="0" stop-color="#ffe9b0"/><stop offset="1" stop-color="#ff7a5a"/></radialGradient></defs>
+    <circle cx="50" cy="50" r="49" fill="#1a0c22"/>
+    <circle cx="50" cy="50" r="15" fill="url(#g)"/>
+    <g fill="none" stroke="#fff" stroke-width="2.2">
+      <ellipse cx="50" cy="50" rx="38" ry="11" transform="rotate(-26 50 50)"/>
+      <ellipse cx="50" cy="50" rx="34" ry="9" transform="rotate(37 50 50)"/>
+      <ellipse cx="50" cy="50" rx="30" ry="7" transform="rotate(100 50 50)"/>
+    </g>
+    <circle cx="20" cy="66" r="3.4" fill="#fff"/>
+  </svg>
+  <h1>Orbit Studio</h1>
+  <div class="tag">Satisfying music animations, created on your own computer.</div>
+  <nav>
+    <a href="#home" data-v="home">About</a>
+    <a href="#terms" data-v="terms">Terms of Service</a>
+    <a href="#privacy" data-v="privacy">Privacy Policy</a>
+  </nav>
+</header>
+
+<main>
+<section id="v-home">
+  <h2>About</h2>
+  <p>Orbit Studio is a small desktop application for designing short vertical music animation videos, where glowing notes orbit around rings and build a melody note by note.</p>
+  <p>Once a video is created, the user can choose to send it to their own TikTok account as a draft, using TikTok's official Login Kit and Content Posting API. The user then reviews, edits and publishes the video themselves in the TikTok app.</p>
+  <h3>How it works</h3>
+  <ul>
+    <li>Pick an animation style and a piece of music.</li>
+    <li>The Studio renders the video locally, on the user's computer.</li>
+    <li>Optionally, the user connects their TikTok account and sends the video to their TikTok drafts.</li>
+  </ul>
+</section>
+
+<section id="v-terms">
+  <h2>Terms of Service</h2>
+  <p class="small">Effective date: November 16, 2026</p>
+  <h3>1. The service</h3>
+  <p>Orbit Studio ("the Studio") is a desktop application that creates music animation videos on the user's computer and, if the user chooses, uploads them to the user's own TikTok account as drafts through TikTok's official APIs.</p>
+  <h3>2. Who may use it</h3>
+  <p>The Studio is a personal, non-commercial tool. Anyone using it must comply with TikTok's Terms of Service and Community Guidelines.</p>
+  <h3>3. Your content and your responsibility</h3>
+  <p>You are responsible for the videos you create and publish, including the music you import. Only use music you have the right to use. The Studio never publishes anything publicly on its own: videos are sent to your TikTok drafts, and you decide whether to publish them.</p>
+  <h3>4. TikTok account access</h3>
+  <p>When you connect your TikTok account, you authorize the Studio, through TikTok Login Kit, to read your basic profile information and to upload videos to your drafts. You can revoke this access at any time from your TikTok account settings (Security &rarr; Manage app permissions).</p>
+  <h3>5. No warranty</h3>
+  <p>The Studio is provided "as is", free of charge, without any warranty. The author is not liable for any loss or damage resulting from its use, including issues with TikTok's services.</p>
+  <h3>6. Changes</h3>
+  <p>These terms may be updated. The effective date above shows the latest version.</p>
+</section>
+
+<section id="v-privacy">
+  <h2>Privacy Policy</h2>
+  <p class="small">Effective date: November 16, 2026</p>
+  <h3>1. Summary</h3>
+  <p>Orbit Studio runs entirely on your own computer. It has no server, no analytics and no advertising. We do not collect, sell or share your personal data.</p>
+  <h3>2. Data used</h3>
+  <ul>
+    <li><strong>TikTok access token:</strong> when you connect your TikTok account, TikTok gives the Studio an access token. It is stored only on your computer and is used only to upload the videos you choose to your TikTok drafts.</li>
+    <li><strong>Basic profile information</strong> (display name and avatar, via the user.info.basic scope): used only to show which account is connected. It is not stored elsewhere.</li>
+    <li><strong>Your videos and music files:</strong> processed locally. A video leaves your computer only when you send it to TikTok.</li>
+  </ul>
+  <h3>3. Data shared with third parties</h3>
+  <p>The only third party involved is TikTok, when you choose to upload a video. TikTok's own privacy policy applies to content uploaded to TikTok.</p>
+  <h3>4. Retention and deletion</h3>
+  <p>You can disconnect your account in the Studio at any time, which deletes the stored token from your computer. You can also revoke access from your TikTok settings. Uninstalling the Studio removes all of its local data.</p>
+  <h3>5. Children</h3>
+  <p>The Studio is not intended for children under 13 and does not knowingly process their data.</p>
+</section>
+</main>
+<footer>&copy; 2026 Orbit Studio</footer>
+
+<script>
+  function show() {
+    var v = (location.hash || "#home").slice(1);
+    if (["home", "terms", "privacy"].indexOf(v) < 0) v = "home";
+    document.querySelectorAll("section").forEach(function (s) { s.classList.toggle("on", s.id === "v-" + v); });
+    document.querySelectorAll("nav a").forEach(function (a) { a.classList.toggle("on", a.dataset.v === v); });
+    window.scrollTo(0, 0);
+  }
+  window.addEventListener("hashchange", show);
+  show();
+</script>
+</body>
+</html>
